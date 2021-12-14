@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>DISTANCE BETWEEN THE COORDINATES</h2>
+<script>
+function myFunction() 
+{
+let x1 = document.getElementById("x1").value;
+let y1 = document.getElementById("y1").value;
+let x2 = document.getElementById("x2").value;
+let y2 = document.getElementById("y2").value;
+let res=Math.sqrt(Math.pow(x1-x2,2)+Math.pow(y1-y2,2));
+document.getElementById("demo").innerHTML = "The distance between the coordinates is: " + res;
+}
+</script>
+<form  onSubmit="return false">
+  <label for="x1">x1 coordinate:</label><br>
+  <input type="number" step="0.1" id="x1" name="x1" value=""><br>
+  <label for="y1">y1 coordinate:</label><br>
+  <input type="number" step="0.1" id="y1" name="y1" value=""><br><br>
+  <label for="x2">x2 coordinate:</label><br>
+  <input type="number" step="0.1" id="x2" name="x2" value=""><br>
+  <label for="y2">y2 coordinate:</label><br>
+  <input type="number" step="0.1" id="y2" name="y2" value=""><br><br>
+  <input type="submit" value="Submit" onClick="myFunction()">
+</form> 
+<br><br>
+<h1 id="demo">The distance between the coordinates is: </h1>
+
+</body>
+</html>
