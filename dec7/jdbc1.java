@@ -70,7 +70,7 @@ class jdbc1
 				System.out.println("CGPA: "+grade+"\n");
 			}
 			con.close();
-			
+			System.out.println("\nFinished\n");
 		} 
 		catch(SQLException e)
 		{ 
