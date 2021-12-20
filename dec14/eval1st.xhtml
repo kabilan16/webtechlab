@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title> First Question </title>
+</head>
+<body>
+<script>
+function myFunction() 
+{
+  let accno = parseInt(prompt("Enter account number "));
+  let bal = parseInt(prompt("Enter balance at the beginning of the month "));
+  let charge = parseInt(prompt("Enter total of all items charged this month"));
+  let credits = parseInt(prompt("Enter total of all credits applied this month"));
+  let limit = parseInt(prompt("Enter credit limit"));
+  let newbal= bal+charge-credits;
+  if (newbal != null) 
+  {
+    document.getElementById("output").innerHTML = "New Balance is: "+newbal;
+  }
+  if (newbal>limit)
+  {
+	document.getElementById("status").innerHTML = "Credit limit exceeded";
+  }
+  else
+  {
+	document.getElementById("status").innerHTML = "Credit limit was not exceeded";
+  }
+}
+</script>
+<center><h2>Enter details to calculate new balance and credit limit status</h2></center>
+<center><button onclick="myFunction()">Enter</button></center>
+<center><h4 id="output"></h4></center>
+<center><h4 id="status"></h4></center>
+</body>
+</html>
