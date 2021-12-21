@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+5th Question
+</title>
+</head>
+<body>
+<h2>Enter the Integer Values</h2>
+<script>
+function displayDigits() 
+{
+let a = parseInt(document.getElementById("a").value);
+let b = parseInt(document.getElementById("b").value);
+let quo= Math.floor(a/b);
+let rem= a%b;
+document.querySelector("#quotient").innerHTML = "The Quotient is: " + quo;
+document.querySelector("#reminder").innerHTML = "The Reminder is: " + rem;
+}
+</script>
+<form  onSubmit="return false">
+  <label for="a">Enter Integer A: </label><br>
+  <input type="number" id="a" name="a" value=""><br>
+  <label for="b">Enter Integer B: </label><br>
+  <input type="number" id="b" name="b" value=""><br>
+  <input type="submit" value="Submit" onClick="displayDigits()">
+</form> 
+<br><br>
+<h3 id="quotient">The Quotient is: </h3>
+<h3 id="reminder">The Reminder is: </h3>
+</body>
+</html>
