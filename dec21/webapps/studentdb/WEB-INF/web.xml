@@ -1,0 +1,13 @@
+<web-app>
+
+<servlet>
+<servlet-name>kabilan</servlet-name>
+<servlet-class>DataStudent</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>kabilan</servlet-name>
+<url-pattern>/results</url-pattern>
+</servlet-mapping>
+
+</web-app>
